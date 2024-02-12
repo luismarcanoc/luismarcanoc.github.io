@@ -264,7 +264,7 @@ function showWinners(message) {
   for (var i = 0; i < winnersList.length; i++) {
     if (localStorage.getItem(winnersList[i]) !== null) {
       console.log('El elemento está en localStorage');
-      localStorage.setItem(winnersList[i], localStorage.getItem(winnersList[i])+1);
+      localStorage.setItem(winnersList[i], parseInt(localStorage.getItem(winnersList[i]))+1);
     } else {
       // El elemento no se encuentra en localStorage
       console.log('El elemento no está en localStorage');
