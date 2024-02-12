@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bingo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="boton">
-<h2>ppppp</h2>
-    </div>
-</body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83b2f94756.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body onload="loadScores()">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Bingo</label>
+      <ul>
+        <li><a href="./game.html">Game</a></li>
+        <li><a class="active" href="./index.html">Menu</a></li>
+      </ul>
+    </nav>
+    <div class="column-container">
+      <div class="menu">
+        <div class="score-container">
+          <h2>Scores</h2>
+          <div class="column-container" id="scores"></div>
+        </div>
+      </div>
+  </body>
 </html>

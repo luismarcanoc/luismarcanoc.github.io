@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bingo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83b2f94756.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Bingo</label>
+      <ul>
+        <li><a class="active" href="./game.html">Reset</a></li>
+        <li><a href="./index.html">Menu</a></li>
+      </ul>
+    </nav>
+    <div class="container" id="game">
+      <aside>
+        <div class="content">
+            <h2>Turno:&#160</h2>
+            <h2 class="turn" id="turn">0</h2>
+        </div>
+      </aside>
+      <div class="container">
+        <div class="ruleta" id="ruleta">
+          <div class="ball-container">
+            <div class="ball" id="ball">00</div>
+            <button class="roll" id="roll" onclick="roll()">Roll</button>
+          </div>
+          <div class="numbers-container">
+            <div class="circle" id="circle01">01</div>
+            <div class="circle" id="circle02">02</div>
+            <div class="circle" id="circle03">03</div>
+            <div class="circle" id="circle04">04</div>
+            <div class="circle" id="circle05">05</div>
+            <div class="circle" id="circle06">06</div>
+            <div class="circle" id="circle07">07</div>
+            <div class="circle" id="circle08">08</div>
+            <div class="circle" id="circle09">09</div>
+            <div class="circle" id="circle10">10</div>
+            <div class="circle" id="circle11">11</div>
+            <div class="circle" id="circle12">12</div>
+            <div class="circle" id="circle13">13</div>
+            <div class="circle" id="circle14">14</div>
+            <div class="circle" id="circle15">15</div>
+            <div class="circle" id="circle16">16</div>
+            <div class="circle" id="circle17">17</div>
+            <div class="circle" id="circle18">18</div>
+            <div class="circle" id="circle19">19</div>
+            <div class="circle" id="circle20">20</div>
+            <div class="circle" id="circle21">21</div>
+            <div class="circle" id="circle22">22</div>
+            <div class="circle" id="circle23">23</div>
+            <div class="circle" id="circle24">24</div>
+            <div class="circle" id="circle25">25</div>
+            <div class="circle" id="circle26">26</div>
+            <div class="circle" id="circle27">27</div>
+            <div class="circle" id="circle28">28</div>
+            <div class="circle" id="circle29">29</div>
+            <div class="circle" id="circle30">30</div>
+            <div class="circle" id="circle31">31</div>
+            <div class="circle" id="circle32">32</div>
+            <div class="circle" id="circle33">33</div>
+            <div class="circle" id="circle34">34</div>
+            <div class="circle" id="circle35">35</div>
+            <div class="circle" id="circle36">36</div>
+            <div class="circle" id="circle37">37</div>
+            <div class="circle" id="circle38">38</div>
+            <div class="circle" id="circle39">39</div>
+            <div class="circle" id="circle40">40</div>
+            <div class="circle" id="circle41">41</div>
+            <div class="circle" id="circle42">42</div>
+            <div class="circle" id="circle43">43</div>
+            <div class="circle" id="circle44">44</div>
+            <div class="circle" id="circle45">45</div>
+            <div class="circle" id="circle46">46</div>
+            <div class="circle" id="circle47">47</div>
+            <div class="circle" id="circle48">48</div>
+            <div class="circle" id="circle49">49</div>
+            <div class="circle" id="circle50">50</div>
+          </div>
+        </div>
+        <div class="row-container" id="end">
+          <div class="end-game">
+            <h2 id="winner"></h2>
+            <p>Volviendo al menú principal...</p>
+          </div>
+        </div>
+        
+        <div class="cards">
+
+          <!-- Full-width images with number and caption text -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          
+          <div class="mySlides fade" id="first">
+            <div class="bingo-card" id="card1" ></div>
+            <div class="text column-container" >
+              <h3 id="player1-name">J1</h3>
+              <div class="row-container" >
+                <h4>Puntos:&#160</h4>
+                <h4 id="player1-score"></h4>
+              </div>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="bingo-card" id="card2" ></div>
+            <div class="text column-container" >
+              <h3 id="player2-name">J2</h3>
+              <div class="row-container" >
+                <h4>Puntos:&#160</h4>
+                <h4 id="player2-score"></h4>
+              </div>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="bingo-card" id="card3" ></div>
+            <div class="text column-container" >
+              <h3 id="player3-name">J3</h3>
+              <div class="row-container" >
+                <h4>Puntos:&#160</h4>
+                <h4 id="player3-score"></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="bingo-card" id="card4" ></div>
+            <div class="text column-container" >
+              <h3 id="player4-name">J4</h3>
+              <div class="row-container" >
+                <h4>Puntos:&#160</h4>
+                <h4 id="player4-score"></h4>
+              </div>
+            </div>
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:row">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="column-container">
+      <div class="column-container" id="game-config">
+        <h2>Configuración</h2>
+
+        <div class="form column-container" style="margin: 10px">
+          <div class="row-container">
+            <label class="text-config">Nombre Jugador 1:</label>
+            <input type="text" id="player1">
+            <label class="text-config warning" id="warning1">* Por favor introduzca un nombre</label>
+          </div>
+
+          <div class="row-container">
+            <label class="text-config">Nombre Jugador 2:</label>
+            <input type="text" id="player2">
+            <label class="text-config warning" id="warning2">* Por favor introduzca un nombre</label>
+          </div>
+
+          <div class="row-container">
+            <label class="text-config">Nombre Jugador 3:</label>
+            <input type="text" id="player3">
+            <label class="text-config warning" id="warning3">* Por favor introduzca un nombre</label>
+          </div>
+
+          <div class="row-container">
+            <label class="text-config">Nombre Jugador 4:</label>
+            <input type="text" id="player4">
+            <label class="text-config warning" id="warning4">* Por favor introduzca un nombre</label>
+          </div>
+
+          <div class="row-container">
+            <label class="text-config">Tamaño Cartones:</label>
+            <select name="" id="card-size">
+              <option value="random">Al azar</option>
+              <option value="3">3x3</option>
+              <option value="4">4x4</option>
+              <option value="5">5x5</option>
+            </select>
+          </div>
+          <div class="row-container">
+            <label class="text-config">Límite de turnos:</label>
+            <input type="number" value="25" class="spinner" id="max-turns">
+            <label class="text-config warning" id="warningLimit">* Por favor introduzca un número</label>
+          </div>
+        </div>
+
+        <button id="start" onclick="startGame()">Empezar</button>
+      </div>
+    </div>
+  </body>
+</html>

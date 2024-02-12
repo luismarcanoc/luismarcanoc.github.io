@@ -1,0 +1,485 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Roboto;
+  background: url(bg1.jpg) repeat-y;
+  background-position: center;
+}
+.card-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#end {
+  display: none;
+}
+.end-game {
+  max-width: 80%;
+  width: fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #df857b;
+  border: solid 5px #ce331f;
+  border-radius: 10px;
+  font-size: 4vh;
+  margin-top: 40px;
+  box-shadow: #282828 0px 0px 10px;
+  padding: 20px;
+}
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#game {
+  display: none;
+}
+#game-config {
+  width: 70%;
+  padding: 20px;
+  margin: 20px;
+  background-color: #e07569;
+  box-shadow: #282828 2px 2px 15px;
+  transition: .5s;
+}
+.gridsquare {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 40px;
+}
+h4 {
+  color: #331717;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+}
+p {
+  color: #333333;
+  text-align: center;
+  font-size: 20px;
+}
+input {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: #282828 0px 0px 10px;
+}
+label {
+  color: #f4f4f4;
+  font-size: 30px;
+  margin: 10px;
+
+}
+label.logo{
+  color: white;
+  font-size: 6vh;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+.menu {
+  width: 70%;
+  padding: 20px;
+  margin: 20px;
+  background-color: #dc4939;
+  box-shadow: #282828 2px 2px 15px;
+  transition: .5s;
+}
+nav{
+  background: #982516;
+  height: 80px;
+  width: 100%;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #1a1a1a;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.number-marked {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #631f17;
+  color: #fbfbfb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.score {
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  background-color: #fdbab3;
+  margin: 10px;
+  box-shadow: #282828 0px 0px 10px;
+}
+select {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: #282828 0px 0px 10px;
+}
+.spinner {
+  width: 100px;
+  justify-content: center;
+}
+a.active,a:hover{
+  background: #d32b15;
+  transition: .5s;
+}
+button {
+  background: #d32b15;
+  color: white;
+  font-family: Roboto;
+  font-size: 30px;
+  width: fit-content;
+  height: 60px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .5s;
+  box-shadow: #282828 0px 0px 10px;
+}
+button:hover {
+  background: #ae3626;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.text-config {
+  color: #222222;
+  font-size: 30px;
+  margin: 10px;
+
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  aside{
+    min-width: 30%;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  ul{
+    position: fixed;
+    width: 55%;
+    background: #502e2c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 5;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #d32b15;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  .card {
+    flex-direction: column;
+  }
+  .text-config {
+    font-size: 20px;
+  }
+}
+section{
+  background: url(bg1.jpg) repeat-y;
+  background-position: center;
+  height: 100vh;
+}
+aside{
+    width: 25%;
+    height: 75px;
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    background: #ce331f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: #282828 0px 0px 10px;
+    transition: .5s;
+    z-index: 6;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ruleta {
+    max-width: 80%;
+    width: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #df857b;
+    border: solid 5px #ce331f;
+    border-radius: 10px;
+    font-size: 4vh;
+    margin-top: 40px;
+    box-shadow: #282828 0px 0px 10px;
+}
+.cards {
+    max-width: 1000px;
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.bingo-card {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 2px solid #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: #282828 0px 0px 10px;
+  overflow: hidden;
+}
+
+.ball {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 20px;
+  font-size: 5vh;
+  background-color: #124a15;
+  color: #fbfbfb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+.ball-container{
+  display: flex;
+  min-width: 250px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.numbers-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 6px;
+  font-size: 2vh;
+  background-color: #fbfbfb;
+  color: #282828;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+#first {
+  display:block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  position:relative;
+  top: 50%;
+  height: 60px; 
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(28, 28, 28);
+  background-color: rgba(234, 186, 186, 0.864);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: rgb(240, 240, 240);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: relative;
+  left: 10%;
+  bottom: 8px;
+  width: 80%;
+  text-align: center;
+  background-color: rgba(255, 230, 230, 0.886);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.warning {
+  color: #982516;
+  display: none;
+}
